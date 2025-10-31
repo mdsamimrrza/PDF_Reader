@@ -1,0 +1,79 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs & debug files
+*.log
+logs/
+*.out
+
+# Model & embedding data
+*.bin
+*.pt
+*.h5
+*.ckpt
+*.model
+*.pkl
+*.npy
+*.npz
+
+# Vector store files (FAISS / Chroma)
+index.faiss
+*.faiss
+*.chroma
+*.sqlite
+*.db
+
+# Uploaded PDFs or user data
+uploads/
+pdfs/
+*.pdf
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Environment variables
+.env
+.env.*
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Jupyter notebooks checkpoints (if used)
+.ipynb_checkpoints/
+
+# Cache folders
+.cache/
+__cache__/
+transformers_cache/
+huggingface/
+.huggingface/
+
+# Node-related (if frontend or Vite integration)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
