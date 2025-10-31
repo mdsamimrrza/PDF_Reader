@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Q&A Assistant - Setup Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .alert h2 {
+            color: #856404;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .alert p {
+            color: #856404;
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .steps {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .step:before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #667eea;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .step h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        code {
+            background: #e8ebff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #764ba2;
+            font-size: 0.95em;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .feature h4 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 PDF Q&A Assistant</h1>
+            <p>AI-powered tool to process and query PDFs using embeddings</p>
+        </header>
+        
+        <div class="alert">
+            <h2>⚠️ This is a Backend Application</h2>
+            <p>
+                This PDF Q&A Assistant is a FastAPI backend application that requires a Python server to run. 
+                It cannot be used directly through GitHub Pages (static hosting). Please follow the setup 
+                instructions below to run it on your local machine.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Quick Start</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Clone the Repository</h3>
+                    <div class="code-block">git clone https://github.com/mdsamimrrza/PDF_Reader.git<br>cd PDF_Reader</div>
+                </div>
+                
+                <div class="step">
+                    <h3>2. Install Dependencies</h3>
+                    <p>Run the installation script (Windows):</p>
+                    <div class="code-block">install.bat</div>
+                    <p>Or manually install with pip:</p>
+                    <div class="code-block">pip install -r requirements.txt</div>
+                </div>
+                
+                <div class="step">
+                    <h3>3. Run the Application</h3>
+                    <p>Start the server (Windows):</p>
+                    <div class="code-block">run.bat</div>
+                    <p>Or manually with Python:</p>
+                    <div class="code-block">python main.py</div>
+                </div>
+                
+                <div class="step">
+                    <h3>4. Open in Browser</h3>
+                    <p>Navigate to:</p>
+                    <div class="code-block">http://localhost:8000</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>✨ Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>📤 Upload PDFs</h4>
+                    <p>Drag and drop or click to upload PDF documents</p>
+                </div>
+                <div class="feature">
+                    <h4>🤖 AI-Powered Q&A</h4>
+                    <p>Ask questions and get comprehensive answers</p>
+                </div>
+                <div class="feature">
+                    <h4>📚 Source References</h4>
+                    <p>View 3 most relevant sources for each answer</p>
+                </div>
+                <div class="feature">
+                    <h4>🗂️ Document Management</h4>
+                    <p>Manage and delete uploaded documents</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🛠️ Technology Stack</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>Backend</h4>
+                    <p>FastAPI + Uvicorn</p>
+                </div>
+                <div class="feature">
+                    <h4>AI/ML</h4>
+                    <p>Hugging Face Transformers, Sentence Transformers</p>
+                </div>
+                <div class="feature">
+                    <h4>PDF Processing</h4>
+                    <p>PyPDF2</p>
+                </div>
+                <div class="feature">
+                    <h4>Frontend</h4>
+                    <p>HTML5/CSS3/JavaScript</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="https://github.com/mdsamimrrza/PDF_Reader" class="btn">View on GitHub →</a>
+        </div>
+        
+        <footer>
+            <p>Made with ❤️ by mdsamimrrza</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                For issues or questions, visit the 
+                <a href="https://github.com/mdsamimrrza/PDF_Reader/issues" style="color: #667eea;">GitHub Issues</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
